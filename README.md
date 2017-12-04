@@ -63,14 +63,15 @@ Add configuration:
 ```yml
 // app/config/config.yml
 //...
-ped_discriminator_map:
-    user:
-        entity: PaneeDesign\UserBundle\Entity\User
-        children:
-            admin:    AppBundle\Entity\Admin
-            owner:    AppBundle\Entity\Owner
-            customer: AppBundle\Entity\Customer
-            ...
+ped_discriminator:
+    map:
+        user:
+            entity: PaneeDesign\UserBundle\Entity\User
+            children:
+                admin:    AppBundle\Entity\Admin
+                owner:    AppBundle\Entity\Owner
+                customer: AppBundle\Entity\Customer
+                ...
 ```
 
 where parent class implement this annotations:

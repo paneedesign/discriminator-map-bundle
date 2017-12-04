@@ -22,8 +22,8 @@ class PedDiscriminatorMapExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        if (array_key_exists('discriminator_map', $config)) {
-            $container->setParameter('ped_discriminator_map.discriminator_map', $config['discriminator_map']);
+        if (array_key_exists('map', $config)) {
+            $container->setParameter('ped_discriminator.map', $config['map']);
         }
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
