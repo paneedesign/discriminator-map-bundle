@@ -18,11 +18,11 @@ class Configuration implements ConfigurationInterface
     public function getConfigTreeBuilder()
     {
         $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('ped_discriminator');
+        $rootNode = $treeBuilder->root('ped_discriminator_map');
 
         $rootNode
             ->children()
-                ->arrayNode('map')
+                ->arrayNode('maps')
                     ->isRequired()
                     ->requiresAtLeastOneElement()
                         ->useAttributeAsKey('name')

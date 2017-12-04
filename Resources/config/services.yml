@@ -1,11 +1,11 @@
 parameters:
-    ped_discriminator.listener.class: PaneeDesign\DiscriminatorMapBundle\EventListener\DiscriminatorMapListener
-    ped_discriminator.map: ''
+    ped_discriminator_map.listener.class: PaneeDesign\DiscriminatorMapBundle\EventListener\DiscriminatorMapListener
+    ped_discriminator_map.maps: ''
 
 services:
-    ped_discriminator.listener:
-        class: "%ped_discriminator.listener.class%"
+    ped_discriminator_map.listener:
+        class: "%ped_discriminator_map.listener.class%"
         tags:
             - { name: doctrine.event_listener, event: loadClassMetadata }
-        arguments: ['%ped_discriminator.map%']
+        arguments: ['%ped_discriminator_map.maps%']
         public: true

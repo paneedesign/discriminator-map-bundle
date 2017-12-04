@@ -63,8 +63,8 @@ Add configuration:
 ```yml
 // app/config/config.yml
 //...
-ped_discriminator:
-    map:
+ped_discriminator_map:
+    maps:
         user:
             entity: PaneeDesign\UserBundle\Entity\User
             children:

@@ -12,7 +12,7 @@ class PedDiscriminatorMapBundle extends Bundle
      */
     public function boot()
     {
-        $listener = $this->container->get('ped_discriminator.listener');
+        $listener = $this->container->get('ped_discriminator_map.listener');
         $em = $this->container
             ->get('doctrine.orm.default_entity_manager');
 

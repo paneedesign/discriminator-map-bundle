@@ -14,16 +14,16 @@ use Doctrine\ORM\Event\LoadClassMetadataEventArgs;
 
 class DiscriminatorMapListener
 {
-    private $discriminatorMap;
+    private $maps;
 
     /**
      * Constructor
      *
-     * @param array $discriminatorMap
+     * @param array $maps
      */
-    public function __construct($discriminatorMap)
+    public function __construct($maps)
     {
-        $this->discriminatorMap = $discriminatorMap;
+        $this->maps = $maps;
     }
 
     /**
@@ -40,22 +40,22 @@ class DiscriminatorMapListener
             $class = new \ReflectionClass($metadata->getName());
         }
 
-        foreach ($this->discriminatorMap as $table => $config) {
+        foreach ($this->maps as $table => $config) {
             if ($class->getName() == $config['entity']) {
                 $reader = new AnnotationReader;
-                $discriminatorMap = array();
+                $maps = array();
 
-                if ($discriminatorMapAnnotation = $reader->getClassAnnotation(
+                if ($mapsAnnotation = $reader->getClassAnnotation(
                     $class,
                     'Doctrine\ORM\Mapping\DiscriminatorMap'
                 )) {
-                    $discriminatorMap = $discriminatorMapAnnotation->value;
+                    $maps = $mapsAnnotation->value;
                 }
 
-                $discriminatorMap = array_merge($discriminatorMap, $config['children']);
-                $discriminatorMap = array_merge($discriminatorMap, array($table => $config['entity']));
+                $maps = array_merge($maps, $config['children']);
+                $maps = array_merge($maps, array($table => $config['entity']));
 
-                $metadata->setDiscriminatorMap($discriminatorMap);
+                $metadata->setDiscriminatorMap($maps);
             }
         }
     }
