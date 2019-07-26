@@ -1,7 +1,17 @@
-Pane e Design - Discriminator Map Bundle
-========================================
+<h1 align="center">Welcome to Discriminator Map Bundle 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.4-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/paneedesign/discriminator-map-bundle">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" target="_blank" />
+  </a>
+  <a href="https://twitter.com/dr_thief">
+    <img alt="Twitter: dr_thief" src="https://img.shields.io/twitter/follow/dr_thief.svg?style=social" target="_blank" />
+  </a>
+</p>
 
-Dynamic DiscriminatorMap extender for Symfony with Doctrine ORM.
+> Dynamic DiscriminatorMap extender for Symfony with Doctrine ORM.
+
+### 🏠 [Homepage](https://crm.humanvsmachine.co)
 
 Installation
 ============
@@ -133,3 +143,21 @@ class Customer
     ...
 }
 ```
+
+## Author
+
+👤 **Fabiano Roberto**
+
+* Twitter: [@dr_thief](https://twitter.com/dr_thief)
+* Github: [@fabianoroberto](https://github.com/fabianoroberto)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/paneedesign/discriminator-map-bundle/issues).
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
